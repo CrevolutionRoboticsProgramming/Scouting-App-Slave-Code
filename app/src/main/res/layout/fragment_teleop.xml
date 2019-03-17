@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/constraintLayout"
+    android:layout_height="match_parent"
+    tools:context=".TeleopScreen">
+
+
+    <ImageView
+        android:id="@+id/rocketCargoView"
+        android:layout_width="738dp"
+        android:layout_height="414dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/rocket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleopRadioGroup"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/teleopRadioGroup"
+        android:layout_width="476dp"
+        android:layout_height="84dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <RadioButton
+            android:id="@+id/rocket1Button"
+            android:layout_width="160dp"
+            android:layout_height="96dp"
+            android:checked="true"
+            android:onClick="checkImageButton"
+            android:text="NEAR ROCKET"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/cargoShipButton"
+            android:layout_width="160dp"
+            android:layout_height="95dp"
+            android:onClick="checkImageButton"
+            android:text="CARGO SHIP"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rocket2Button"
+            android:layout_width="160dp"
+            android:layout_height="95dp"
+            android:onClick="checkImageButton"
+            android:text="FAR ROCKET"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="TELEOP"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/rocket1_hatch6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="80dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/rocket1_hatch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="60dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket1_hatch6" />
+
+    <CheckBox
+        android:id="@+id/rocket1_hatch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="60dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket1_hatch5" />
+
+    <CheckBox
+        android:id="@+id/rocket1_hatch3"
+        android:layout_width="36dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="80dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/rocket1_hatch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="60dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket1_hatch3" />
+
+    <CheckBox
+        android:id="@+id/rocket1_hatch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="60dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket1_hatch2" />
+
+    <CheckBox
+        android:id="@+id/rocket1_cargo6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="155dp"
+        android:layout_marginTop="80dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/rocket1_cargo5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="155dp"
+        android:layout_marginTop="60dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket1_cargo6" />
+
+    <CheckBox
+        android:id="@+id/rocket1_cargo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="155dp"
+        android:layout_marginTop="60dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket1_cargo5" />
+
+    <CheckBox
+        android:id="@+id/rocket1_cargo3"
+        android:layout_width="36dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="80dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/rocket1_cargo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="60dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket1_cargo3" />
+
+    <CheckBox
+        android:id="@+id/rocket1_cargo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="60dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket1_cargo2" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_hatch1"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="25dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_cargo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/cargoShip_hatch1"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_hatch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="25dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_cargo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/cargoShip_hatch2"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_hatch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="450dp"
+        android:layout_marginTop="25dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_cargo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/cargoShip_hatch3"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_hatch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="150dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rocketCargoView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_cargo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="25dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rocketCargoView"
+        app:layout_constraintStart_toEndOf="@+id/cargoShip_hatch4" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_hatch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="300dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rocketCargoView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_cargo5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="25dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rocketCargoView"
+        app:layout_constraintStart_toEndOf="@+id/cargoShip_hatch5" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_hatch6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="450dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rocketCargoView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_cargo6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="25dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rocketCargoView"
+        app:layout_constraintStart_toEndOf="@+id/cargoShip_hatch6" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_hatch7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="90dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_cargo7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cargoShip_hatch7" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_hatch8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="30dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cargoShip_cargo8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cargoShip_cargo8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:layout_marginStart="30dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rocketCargoView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/rocket2_cargo6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="155dp"
+        android:layout_marginTop="80dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/rocket2_cargo5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="155dp"
+        android:layout_marginTop="60dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket2_cargo6" />
+
+    <CheckBox
+        android:id="@+id/rocket2_cargo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="155dp"
+        android:layout_marginTop="60dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket2_cargo5" />
+
+    <CheckBox
+        android:id="@+id/rocket2_cargo3"
+        android:layout_width="36dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="80dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/rocket2_cargo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="60dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket2_cargo3" />
+
+    <CheckBox
+        android:id="@+id/rocket2_cargo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="60dp"
+        android:button="@drawable/custom_checkbox"
+        android:onClick="cargoUpdate"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket2_cargo2" />
+
+    <CheckBox
+        android:id="@+id/rocket2_hatch6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="80dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/rocket2_hatch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="60dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket2_hatch6" />
+
+    <CheckBox
+        android:id="@+id/rocket2_hatch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="60dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket2_hatch5" />
+
+    <CheckBox
+        android:id="@+id/rocket2_hatch3"
+        android:layout_width="36dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="80dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rocketCargoView" />
+
+    <CheckBox
+        android:id="@+id/rocket2_hatch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="60dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket2_hatch3" />
+
+    <CheckBox
+        android:id="@+id/rocket2_hatch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="60dp"
+        android:onClick="hatchUpdate"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocket2_hatch2" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="NEAR ROCKET"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocketCargoView" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="CARGO SHIP"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocketCargoView" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="15dp"
+        android:text="FAR ROCKET"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rocketCargoView" />
+
+    <TextView
+        android:id="@+id/cargoShipInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Null"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/rocketOneInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Null"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/rocket2Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Null"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+
+</android.support.constraint.ConstraintLayout>
